@@ -4,10 +4,10 @@ import { GalleryImage } from './types';
 export const WEDDING_DATE = new Date('2026-12-31T16:00:00');
 
 export const COUPLE = {
-  names: "Mouna & Sid Ahmed",
+  names: "Mia & Alexandar",
   // Added more Arabic text here to demonstrate the multi-line capability
   message: "We invite you to share in our joy as we unite in marriage.\n\nنتشرف بدعوتكم لحضور حفل زفافنا ومشاركتنا فرحتنا. وجودكم يزيدنا بهجة وسروراً",
-  location: "Salle de manal Arib, Ain Defla",
+  location: "Salle de fetes Arib, Ain Defla",
   googleMapsLink: "https://maps.app.goo.gl/FJVYtpSdWmZAnina7"
 };
 
