@@ -42,9 +42,9 @@ export const CONTENT = {
 };
 
 export const GALLERY_IMAGES: GalleryImage[] = [
-  { id: 1, url: "https://picsum.photos/800/600?random=1", alt: "Couple walking on beach" },
-  { id: 2, url: "https://picsum.photos/800/800?random=2", alt: "Holding hands" },
-  { id: 3, url: "https://picsum.photos/600/800?random=3", alt: "Engagement ring" }
+  { id: 1, url: "https://cdn.pixabay.com/photo/2016/03/14/14/21/bride-1255520_1280.jpg", alt: "Couple walking on beach" },
+  { id: 2, url: "https://cdn.pixabay.com/photo/2014/09/13/04/59/couple-443600_1280.jpg", alt: "Holding hands" },
+  { id: 3, url: "https://cdn.pixabay.com/photo/2018/04/16/08/36/bridal-bouquet-3323903_1280.jpg", alt: "Engagement ring" }
 ];
 
 // A gentle, royalty-free classical piece or piano placeholder
