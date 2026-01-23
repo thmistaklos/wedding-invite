@@ -1,14 +1,14 @@
 import { GalleryImage } from './types';
 
 // Target Date: December 31, 2026 16:00:00
-export const WEDDING_DATE = new Date('2026-12-31T16:00:00');
+export const WEDDING_DATE = new Date('2026-02-13T13:30:00');
 
 export const COUPLE = {
-  names: "Mia & Alexandar",
+  names: "Noudjoud & Saleh",
   // Added more Arabic text here to demonstrate the multi-line capability
-  message: "We invite you to share in our joy as we unite in marriage.\n\nنتشرف بدعوتكم لحضور حفل زفافنا ومشاركتنا فرحتنا. وجودكم يزيدنا بهجة وسروراً",
-  location: "Salle de fetes Arib, Ain Defla",
-  googleMapsLink: "https://maps.app.goo.gl/FJVYtpSdWmZAnina7"
+  message: "We invite you to share in our joy as we unite in marriage.\n\nوَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةًً",
+  location: "Salle Des Fêtes Lailati, Ain Defla",
+  googleMapsLink: "https://maps.app.goo.gl/vafStAyBkLb4MS6o6"
 };
 
 export const CONTENT = {
@@ -17,33 +17,35 @@ export const CONTENT = {
     button: "Open Invitation | دعوة"
   },
   hero: {
-    label: "We're Getting Married | زواجنا"
+    label: "We're Getting Married",
+    // REPLACE THIS URL with your uploaded image URL
+    image: "https://cdn.pixabay.com/photo/2016/05/27/22/25/roses-1420719_1280.jpg"
   },
   saveTheDate: {
-    title: "Save the Date | احفظ التاريخ",
+    title: "Save the Date",
     ceremonyTitle: "The Ceremony | الحفل",
     viewMap: "View Map | الموقع"
   },
   countdown: {
-    title: "Counting Down Forever | العد التنازلي"
+    title: "Counting Down Forever"
   },
   gallery: {
-    title: "Our Moments | لحظاتنا"
+    title: "Our Moments"
   },
-  rsvp: {
-    title: "Are you attending? | هل ستحضر؟",
-    message: "Please let us know if you will be joining our celebration by December 1st, 2026.\n\nيرجى تأكيد الحضور قبل الأول من ديسمبر",
-    button: "RSVP Now | تأكيد الحضور",
-    link: "https://docs.google.com/forms/"
+  notes: {
+    title: "Important Notes\nمن فظلكم",
+    items: [
+      "The hall management does not accept the presence of children.\n\nإدارة القاعة لا تسمح بحضور الأطفال."
+    ]
   },
   footer: {
-     copyright: "designed by SidAhmed."
+     copyright: "designed by mystery."
   }
 };
 
 export const GALLERY_IMAGES: GalleryImage[] = [
-  { id: 1, url: "https://cdn.pixabay.com/photo/2016/11/18/22/21/bride-1837148_1280.jpg", alt: "Couple walking on beach" },
-  { id: 2, url: "https://cdn.pixabay.com/photo/2014/09/13/04/59/couple-443600_1280.jpg", alt: "Holding hands" },
+  { id: 1, url: "https://cdn.pixabay.com/photo/2016/03/14/14/21/bride-1255520_1280.jpg", alt: "Couple walking on beach" },
+  { id: 2, url: "https://cdn.pixabay.com/photo/2016/11/18/18/32/wedding-1836315_1280.jpg" },
   { id: 3, url: "https://cdn.pixabay.com/photo/2018/04/16/08/36/bridal-bouquet-3323903_1280.jpg", alt: "Engagement ring" }
 ];
 

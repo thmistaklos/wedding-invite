@@ -57,14 +57,30 @@ const App: React.FC = () => {
       <main className={`transition-opacity duration-1000 ${!isIntroVisible ? 'opacity-100' : 'opacity-0'} ${isIntroVisible ? 'h-screen overflow-hidden' : 'min-h-screen'}`}>
         
         {/* Header / Hero Section */}
-        <section className="min-h-screen flex flex-col items-center justify-center text-center p-6 pt-20 relative bg-gradient-to-b from-stone-50 to-white">
-          <div className="max-w-2xl mx-auto z-10 animate-slide-up">
-            <p className="text-stone-500 uppercase tracking-widest text-sm mb-4">{CONTENT.hero.label}</p>
-            <h1 className="font-script text-7xl md:text-9xl text-wedding-gold mb-6 drop-shadow-sm">{COUPLE.names}</h1>
-            <p className="font-serif italic text-xl md:text-2xl text-stone-700 mb-8 max-w-lg mx-auto leading-relaxed whitespace-pre-wrap">
-              {COUPLE.message}
-            </p>
-            <div className="w-24 h-1 bg-wedding-gold mx-auto mb-10"></div>
+        <section className="min-h-screen flex flex-col items-center justify-center text-center p-6 pt-20 relative bg-stone-50 overflow-hidden">
+          
+          {/* Background Image Layer */}
+          <div className="absolute inset-0 z-0">
+            {/* Image is now fully visible (no opacity reduction) so it frames the card nicely */}
+            <img 
+              src={CONTENT.hero.image} 
+              alt="Background" 
+              className="w-full h-full object-cover"
+            />
+            {/* Light overall overlay to ensure it's not too jarring */}
+            <div className="absolute inset-0 bg-white/10"></div>
+          </div>
+
+          {/* Text Content - Enclosed in a Glass Card for readability */}
+          <div className="relative z-10 animate-slide-up max-w-3xl mx-auto">
+            <div className="bg-white/90 backdrop-blur-md shadow-2xl rounded-[3rem] p-10 md:p-16 border border-white/50 mx-4">
+              <p className="text-wedding-gold uppercase tracking-widest text-sm mb-4 font-bold">{CONTENT.hero.label}</p>
+              <h1 className="font-script text-6xl md:text-8xl lg:text-9xl text-wedding-gold mb-6 drop-shadow-sm leading-tight">{COUPLE.names}</h1>
+              <p className="font-serif italic text-xl md:text-2xl text-stone-800 mb-8 max-w-lg mx-auto leading-relaxed whitespace-pre-wrap">
+                {COUPLE.message}
+              </p>
+              <div className="w-24 h-1 bg-wedding-gold mx-auto"></div>
+            </div>
           </div>
         </section>
 
@@ -105,22 +121,21 @@ const App: React.FC = () => {
         {/* Gallery */}
         <Gallery />
 
-        {/* RSVP Section */}
+        {/* Notes / Rules Section */}
         <section className="py-24 bg-stone-900 text-stone-100 text-center px-6 relative overflow-hidden">
           <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-          <div className="relative z-10 max-w-2xl mx-auto">
-            <h2 className="font-script text-6xl text-wedding-gold mb-6">{CONTENT.rsvp.title}</h2>
-            <p className="font-sans text-lg text-stone-300 mb-10 leading-relaxed whitespace-pre-wrap">
-              {CONTENT.rsvp.message}
-            </p>
-            <a 
-              href={CONTENT.rsvp.link} 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-10 py-4 bg-wedding-gold text-stone-900 font-bold uppercase tracking-widest hover:bg-white transition-all transform hover:-translate-y-1 shadow-lg hover:shadow-wedding-gold/50 rounded-sm"
-            >
-              {CONTENT.rsvp.button}
-            </a>
+          <div className="relative z-10 max-w-3xl mx-auto">
+            <h2 className="font-script text-5xl md:text-6xl text-wedding-gold mb-12 whitespace-pre-wrap leading-tight">{CONTENT.notes.title}</h2>
+            
+            <div className="space-y-6">
+              {CONTENT.notes.items.map((note, index) => (
+                <div key={index} className="bg-stone-800/40 border border-wedding-gold/20 p-8 rounded-xl backdrop-blur-sm transform hover:scale-[1.02] transition-transform duration-300">
+                  <p className="font-sans text-lg md:text-xl text-stone-300 leading-relaxed whitespace-pre-wrap">
+                    {note}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
